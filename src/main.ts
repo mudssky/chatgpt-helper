@@ -1,9 +1,6 @@
 import { createApp } from 'vue'
-// import './style.css'
 import App from './App.vue'
 import 'uno.css'
-
-import 'tippy.js/dist/tippy.css' // optional for styling
 
 console.log('hello world')
 const appid = 'chat-app-helper'
