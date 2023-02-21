@@ -4,6 +4,7 @@
 // @version      0.0.1
 // @author       mudssky
 // @description  增加保存对话为png和markdown的功能
+// @license      MIT
 // @icon         https://chat.openai.com/favicon-32x32.png
 // @homepage     https://github.com/mudssky/chatgpt-helper
 // @homepageURL  https://github.com/mudssky/chatgpt-helper

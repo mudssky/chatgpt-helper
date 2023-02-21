@@ -19,6 +19,7 @@ export default defineConfig({
         match: ['https://chat.openai.com/*'],
         author: packageJson.author,
         version: packageJson.version,
+        license: packageJson.license,
         updateURL:
           'https://github.com/mudssky/chatgpt-helper/blob/main/dist/chatgpt-helper.user.js',
       },
