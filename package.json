@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "repository": "https://github.com/mudssky/chatgpt-helper",
   "homepage": "https://github.com/mudssky/chatgpt-helper",
+  "description": "增加保存对话为png和markdown的功能",
   "type": "module",
   "scripts": {
     "dev": "vite",

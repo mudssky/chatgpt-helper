@@ -15,6 +15,7 @@ export default defineConfig({
       userscript: {
         icon: 'https://chat.openai.com/favicon-32x32.png',
         namespace: packageJson.homepage,
+        description: packageJson.description,
         match: ['https://chat.openai.com/*'],
         author: packageJson.author,
         version: packageJson.version,
