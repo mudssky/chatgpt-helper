@@ -1,7 +1,10 @@
 {
   "name": "chatgpt-helper",
+  "author": "mudssky",
   "private": true,
   "version": "0.0.1",
+  "repository": "https://github.com/mudssky/chatgpt-helper",
+  "homepage": "https://github.com/mudssky/chatgpt-helper",
   "type": "module",
   "scripts": {
     "dev": "vite",
