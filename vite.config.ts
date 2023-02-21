@@ -22,6 +22,7 @@ export default defineConfig({
         license: packageJson.license,
         updateURL:
           'https://github.com/mudssky/chatgpt-helper/blob/main/dist/chatgpt-helper.user.js',
+        'run-at': 'document-body',
       },
       build: {
         externalGlobals: {

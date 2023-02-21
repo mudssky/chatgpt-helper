@@ -126,7 +126,7 @@ function handleCopyMarkdown() {
     class="fixed right-0 bottom-[50%] w-[200px] transition-all translate-x-[180px] hover:translate-x-[0px]  h-[200px] bg-gray-300 p-[20px] rounded space-y-[10px]">
     <button @click="handleScreenshot"
       class="btn flex justify-center gap-2 btn-neutral border-0 md:border">screenshot</button>
-    <button @click="handleCopyMarkdown" class="btn flex justify-center gap-2 btn-neutral border-0 md:border">copy
+    <button @click="handleCopyMarkdown" class="btn flex justify-center gap-2 btn-neutral border-0 md:border">export
       markdown</button>
   </div>
 </template>
