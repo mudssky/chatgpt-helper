@@ -4,12 +4,13 @@ import 'uno.css'
 
 console.log('hello world')
 const appid = 'chat-app-helper'
-function mountButtons() {
+function mountApp() {
   setTimeout(() => {
     createApp(App).mount(
       (() => {
         const app = document.createElement('div')
 
+        console.log('mount app')
         app.id = appid
         // const buttonContainer = document.querySelector('.w-full.flex-shrink-0')!
         document.body.append(app)
@@ -27,7 +28,7 @@ const observer = new MutationObserver((mutationsList) => {
     if (mutation.type === 'childList') {
       // 在此处执行你的操作
       if (!document.getElementById(appid)) {
-        mountButtons()
+        mountApp()
       }
     }
   }
@@ -46,5 +47,5 @@ const buttonContainer = document.querySelector('.w-full.flex-shrink-0')!
 const targetNode = buttonContainer
 observer.observe(targetNode, config)
 setTimeout(() => {
-  mountButtons()
+  mountApp()
 }, 1000)
