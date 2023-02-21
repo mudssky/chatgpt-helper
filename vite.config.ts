@@ -32,6 +32,11 @@ export default defineConfig({
     }),
   ],
   build: {
-    minify: true,
+    minify: 'terser',
+    terserOptions: {
+      mangle: {
+        reserved: ['GM_download'],
+      },
+    },
   },
 })
