@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-helper
 // @namespace    https://github.com/mudssky/chatgpt-helper
-// @version      0.0.1
+// @version      0.0.2
 // @author       mudssky
 // @description  增加保存对话为png和markdown的功能
 // @license      MIT
@@ -13,11 +13,12 @@
 // @match        https://chat.openai.com/*
 // @require      https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js
 // @grant        GM_download
+// @run-at       document-body
 // ==/UserScript==
 
-(n=>{const a=document.createElement("style");a.dataset.source="vite-plugin-monkey",a.innerText=n,document.head.appendChild(a)})(".logo[data-v-9ad8418b]{height:6em;padding:1.5em;will-change:filter}.logo[data-v-9ad8418b]:hover{filter:drop-shadow(0 0 2em #646cffaa)}.logo.vue[data-v-9ad8418b]:hover{filter:drop-shadow(0 0 2em #42b883aa)}*,:before,:after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }::backdrop{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.fixed{position:fixed}.bottom-\\[50\\%\\]{bottom:50%}.right-0{right:0}.h-\\[200px\\]{height:200px}.w-\\[200px\\]{width:200px}.flex{display:flex}.table{display:table}.hover\\:translate-x-\\[0px\\]:hover{--un-translate-x:0px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.translate-x-\\[180px\\]{--un-translate-x:180px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.justify-center{justify-content:center}.gap-2{grid-gap:.5rem;gap:.5rem}.space-y-\\[10px\\]>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(10px * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(10px * var(--un-space-y-reverse))}.border-0{border-width:0}.rounded{border-radius:.25rem}.bg-gray-300{--un-bg-opacity:1;background-color:rgba(209,213,219,var(--un-bg-opacity))}.p-\\[20px\\]{padding:20px}.filter{filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@media (min-width: 768px){.md\\:border{border-width:1px}}");
+(n=>{const a=document.createElement("style");a.dataset.source="vite-plugin-monkey",a.innerText=n,document.head.appendChild(a)})(".logo[data-v-10faaad2]{height:6em;padding:1.5em;will-change:filter}.logo[data-v-10faaad2]:hover{filter:drop-shadow(0 0 2em #646cffaa)}.logo.vue[data-v-10faaad2]:hover{filter:drop-shadow(0 0 2em #42b883aa)}*,:before,:after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }::backdrop{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.fixed{position:fixed}.bottom-\\[50\\%\\]{bottom:50%}.right-0{right:0}.h-\\[200px\\]{height:200px}.w-\\[200px\\]{width:200px}.flex{display:flex}.table{display:table}.hover\\:translate-x-\\[0px\\]:hover{--un-translate-x:0px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.translate-x-\\[180px\\]{--un-translate-x:180px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.justify-center{justify-content:center}.gap-2{grid-gap:.5rem;gap:.5rem}.space-y-\\[10px\\]>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(10px * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(10px * var(--un-space-y-reverse))}.border-0{border-width:0}.rounded{border-radius:.25rem}.bg-gray-300{--un-bg-opacity:1;background-color:rgba(209,213,219,var(--un-bg-opacity))}.p-\\[20px\\]{padding:20px}.filter{filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@media (min-width: 768px){.md\\:border{border-width:1px}}");
 
-(function(vue) {
+var __plugin_monkey_exposed = function(exports, vue) {
   "use strict";
   /*!
    * html2canvas 1.4.1 <https://html2canvas.hertzen.com>
@@ -8614,7 +8615,7 @@
   function canConvert(input) {
     return input != null && (typeof input === "string" || input.nodeType && (input.nodeType === 1 || input.nodeType === 9 || input.nodeType === 11));
   }
-  const turndownPluginGfm = function(exports) {
+  const turndownPluginGfm = function(exports2) {
     var highlightRegExp = /highlight-(?:text|source)-([a-z0-9]+)/;
     function highlightedCodeBlock(turndownService) {
       turndownService.addRule("highlightedCodeBlock", {
@@ -8722,12 +8723,12 @@
         taskListItems
       ]);
     }
-    exports.gfm = gfm;
-    exports.highlightedCodeBlock = highlightedCodeBlock;
-    exports.strikethrough = strikethrough;
-    exports.tables = tables;
-    exports.taskListItems = taskListItems;
-    return exports;
+    exports2.gfm = gfm;
+    exports2.highlightedCodeBlock = highlightedCodeBlock;
+    exports2.strikethrough = strikethrough;
+    exports2.tables = tables;
+    exports2.taskListItems = taskListItems;
+    return exports2;
   }({});
   const _hoisted_1 = { class: "fixed right-0 bottom-[50%] w-[200px] transition-all translate-x-[180px] hover:translate-x-[0px] h-[200px] bg-gray-300 p-[20px] rounded space-y-[10px]" };
   const _sfc_main = /* @__PURE__ */ vue.defineComponent({
@@ -8827,12 +8828,12 @@ ${content2}
           vue.createElementVNode("button", {
             onClick: handleCopyMarkdown,
             class: "btn flex justify-center gap-2 btn-neutral border-0 md:border"
-          }, "copy markdown")
+          }, "export markdown")
         ]);
       };
     }
   });
-  const App_vue_vue_type_style_index_0_scoped_9ad8418b_lang = "";
+  const App_vue_vue_type_style_index_0_scoped_10faaad2_lang = "";
   const _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
     for (const [key, val] of props) {
@@ -8840,22 +8841,20 @@ ${content2}
     }
     return target;
   };
-  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-9ad8418b"]]);
+  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-10faaad2"]]);
   const __uno = "";
   console.log("hello world");
   const appid = "chat-app-helper";
   function mountApp() {
-    setTimeout(() => {
-      vue.createApp(App).mount(
-        (() => {
-          const app = document.createElement("div");
-          console.log("mount app");
-          app.id = appid;
-          document.body.append(app);
-          return app;
-        })()
-      );
-    }, 1e3);
+    vue.createApp(App).mount(
+      (() => {
+        const app = document.createElement("div");
+        console.log("mount app");
+        app.id = appid;
+        document.body.append(app);
+        return app;
+      })()
+    );
   }
   const observer = new MutationObserver((mutationsList) => {
     for (let mutation of mutationsList) {
@@ -8868,14 +8867,19 @@ ${content2}
   });
   const config = {
     attributes: true,
+    //观察目标属性的改变
     childList: true,
+    //观察目标子节点的变化，比如添加或者删除目标子节点，不包括修改子节点以及子节点后代的变化
     subtree: true,
+    // 目标以及目标的后代改变都会观察
     characterData: true
+    //观察目标数据的改变(改变前的数据/值)
   };
-  const buttonContainer = document.querySelector(".w-full.flex-shrink-0");
-  const targetNode = buttonContainer;
-  observer.observe(targetNode, config);
   setTimeout(() => {
     mountApp();
   }, 1e3);
-})(Vue);
+  exports.config = config;
+  exports.observer = observer;
+  Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+  return exports;
+}({}, Vue);
