@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import monkey, { cdn } from 'vite-plugin-monkey'
 import UnoCSS from 'unocss/vite'
+import packageJson from './package.json' //--resolveJsonModule
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -12,9 +13,13 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
-        icon: 'https://vitejs.dev/logo.svg',
-        namespace: 'npm/vite-plugin-monkey',
+        icon: 'https://chat.openai.com/favicon-32x32.png',
+        namespace: packageJson.homepage,
         match: ['https://chat.openai.com/*'],
+        author: packageJson.author,
+        version: packageJson.version,
+        updateURL:
+          'https://github.com/mudssky/chatgpt-helper/blob/main/dist/chatgpt-helper.user.js',
       },
       build: {
         externalGlobals: {
