@@ -31,12 +31,13 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    minify: 'terser',
-    terserOptions: {
-      mangle: {
-        reserved: ['GM_download'],
-      },
-    },
-  },
+  // 没必要压缩，主要是每次打包git都会记录，太占用空间了。不压缩的情况下每次改动比较小
+  // build: {
+  //   minify: 'terser',
+  //   terserOptions: {
+  //     mangle: {
+  //       reserved: ['GM_download'],
+  //     },
+  //   },
+  // },
 })

@@ -88,13 +88,14 @@ function downloadBlob(blob: Blob, fileName: string) {
   document.body.removeChild(link)
 }
 function handleCopyMarkdown() {
-  const content = Array.from(document.querySelectorAll('main .items-center>div')).map(i => {
+  const content = Array.from(document.querySelectorAll('main .items-center>div')).map((i: any) => {
     let j: any = i.cloneNode(true);
     if (/dark\:bg-gray-800/.test((i as any).getAttribute('class'))) {
-      j.innerHTML = `<blockquote>${i.innerHTML}</blockquote>`;
+      j.innerHTML = `<h2>${i.innerText}</h2>`;
     }
+    // console.log(j.innerHTML)
     return j.innerHTML;
-  }).join('<hr />');
+  }).join('<br />');
   const turndownService = getTurnDownService()
 
 
