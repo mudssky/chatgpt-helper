@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         chatgpt-helper
 // @namespace    https://github.com/mudssky/chatgpt-helper
-// @version      0.1.1
+// @version      0.2.0
 // @author       mudssky
 // @description  增加保存对话为png和markdown的功能
 // @license      MIT
