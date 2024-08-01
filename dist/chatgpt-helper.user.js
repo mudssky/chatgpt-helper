@@ -11,41 +11,42 @@
 // @source       https://github.com/mudssky/chatgpt-helper
 // @updateURL    https://github.com/mudssky/chatgpt-helper/blob/main/dist/chatgpt-helper.user.js
 // @match        https://chat.openai.com/*
-// @require      https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js
+// @match        https://chatgpt.com/*
+// @require      https://cdn.jsdelivr.net/npm/vue@3.4.35/dist/vue.global.prod.js
+// @grant        GM_addStyle
 // @grant        GM_download
 // @run-at       document-body
 // ==/UserScript==
 
-(n=>{const a=document.createElement("style");a.dataset.source="vite-plugin-monkey",a.innerText=n,document.head.appendChild(a)})(".logo[data-v-76ea7d44]{height:6em;padding:1.5em;will-change:filter}.logo[data-v-76ea7d44]:hover{filter:drop-shadow(0 0 2em #646cffaa)}.logo.vue[data-v-76ea7d44]:hover{filter:drop-shadow(0 0 2em #42b883aa)}*,:before,:after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }::backdrop{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.fixed{position:fixed}.bottom-\\[50\\%\\]{bottom:50%}.right-0{right:0}.h-\\[200px\\]{height:200px}.w-\\[200px\\]{width:200px}.flex{display:flex}.table{display:table}.hover\\:translate-x-\\[0px\\]:hover{--un-translate-x:0px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.translate-x-\\[180px\\]{--un-translate-x:180px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.justify-center{justify-content:center}.gap-2{grid-gap:.5rem;gap:.5rem}.space-y-\\[10px\\]>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(10px * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(10px * var(--un-space-y-reverse))}.border-0{border-width:0}.rounded{border-radius:.25rem}.bg-gray-300{--un-bg-opacity:1;background-color:rgba(209,213,219,var(--un-bg-opacity))}.p-\\[20px\\]{padding:20px}.filter{filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@media (min-width: 768px){.md\\:border{border-width:1px}}");
+(a=>{if(typeof GM_addStyle=="function"){GM_addStyle(a);return}const n=document.createElement("style");n.textContent=a,document.head.append(n)})(" .logo[data-v-76ea7d44]{height:6em;padding:1.5em;will-change:filter}.logo[data-v-76ea7d44]:hover{filter:drop-shadow(0 0 2em #646cffaa)}.logo.vue[data-v-76ea7d44]:hover{filter:drop-shadow(0 0 2em #42b883aa)}*,:before,:after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }::backdrop{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.fixed{position:fixed}.bottom-\\[50\\%\\]{bottom:50%}.right-0{right:0}.h-\\[200px\\]{height:200px}.w-\\[200px\\]{width:200px}.flex{display:flex}.table{display:table}.hover\\:translate-x-\\[0px\\]:hover{--un-translate-x:0px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.translate-x-\\[180px\\]{--un-translate-x:180px;transform:translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))}.justify-center{justify-content:center}.gap-2{grid-gap:.5rem;gap:.5rem}.space-y-\\[10px\\]>:not([hidden])~:not([hidden]){--un-space-y-reverse:0;margin-top:calc(10px * calc(1 - var(--un-space-y-reverse)));margin-bottom:calc(10px * var(--un-space-y-reverse))}.border-0{border-width:0}.rounded{border-radius:.25rem}.bg-gray-300{--un-bg-opacity:1;background-color:rgba(209,213,219,var(--un-bg-opacity))}.p-\\[20px\\]{padding:20px}.filter{filter:var(--un-blur) var(--un-brightness) var(--un-contrast) var(--un-drop-shadow) var(--un-grayscale) var(--un-hue-rotate) var(--un-invert) var(--un-saturate) var(--un-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@media (min-width: 768px){.md\\:border{border-width:1px}} ");
 
-var __plugin_monkey_exposed = function(exports, vue) {
-  "use strict";
+(function (vue) {
+  'use strict';
+
   /*!
    * html2canvas 1.4.1 <https://html2canvas.hertzen.com>
    * Copyright (c) 2022 Niklas von Hertzen <https://hertzen.com>
    * Released under MIT License
    */
   /*! *****************************************************************************
-      Copyright (c) Microsoft Corporation.
-  
-      Permission to use, copy, modify, and/or distribute this software for any
-      purpose with or without fee is hereby granted.
-  
-      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-      REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-      AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-      INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-      LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-      OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-      PERFORMANCE OF THIS SOFTWARE.
-      ***************************************************************************** */
+  Copyright (c) Microsoft Corporation.
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+  REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+  AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+  INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+  LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+  OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+  ***************************************************************************** */
   var extendStatics = function(d, b) {
     extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
       d2.__proto__ = b2;
     } || function(d2, b2) {
-      for (var p in b2)
-        if (Object.prototype.hasOwnProperty.call(b2, p))
-          d2[p] = b2[p];
+      for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
     };
     return extendStatics(d, b);
   };
@@ -60,11 +61,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
   }
   var __assign = function() {
     __assign = Object.assign || function __assign2(t) {
-      for (var s, i2 = 1, n = arguments.length; i2 < n; i2++) {
-        s = arguments[i2];
-        for (var p in s)
-          if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
+      for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
       }
       return t;
     };
@@ -94,13 +93,12 @@ var __plugin_monkey_exposed = function(exports, vue) {
       function step(result) {
         result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
       }
-      step((generator = generator.apply(thisArg, _arguments || [])).next());
+      step((generator = generator.apply(thisArg, [])).next());
     });
   }
   function __generator(thisArg, body) {
     var _ = { label: 0, sent: function() {
-      if (t[0] & 1)
-        throw t[1];
+      if (t[0] & 1) throw t[1];
       return t[1];
     }, trys: [], ops: [] }, f2, y, t, g;
     return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -112,76 +110,68 @@ var __plugin_monkey_exposed = function(exports, vue) {
       };
     }
     function step(op) {
-      if (f2)
-        throw new TypeError("Generator is already executing.");
-      while (_)
-        try {
-          if (f2 = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-            return t;
-          if (y = 0, t)
-            op = [op[0] & 2, t.value];
-          switch (op[0]) {
-            case 0:
-            case 1:
+      if (f2) throw new TypeError("Generator is already executing.");
+      while (_) try {
+        if (f2 = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+        if (y = 0, t) op = [op[0] & 2, t.value];
+        switch (op[0]) {
+          case 0:
+          case 1:
+            t = op;
+            break;
+          case 4:
+            _.label++;
+            return { value: op[1], done: false };
+          case 5:
+            _.label++;
+            y = op[1];
+            op = [0];
+            continue;
+          case 7:
+            op = _.ops.pop();
+            _.trys.pop();
+            continue;
+          default:
+            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+              _ = 0;
+              continue;
+            }
+            if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+              _.label = op[1];
+              break;
+            }
+            if (op[0] === 6 && _.label < t[1]) {
+              _.label = t[1];
               t = op;
               break;
-            case 4:
-              _.label++;
-              return { value: op[1], done: false };
-            case 5:
-              _.label++;
-              y = op[1];
-              op = [0];
-              continue;
-            case 7:
-              op = _.ops.pop();
-              _.trys.pop();
-              continue;
-            default:
-              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                _ = 0;
-                continue;
-              }
-              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                _.label = op[1];
-                break;
-              }
-              if (op[0] === 6 && _.label < t[1]) {
-                _.label = t[1];
-                t = op;
-                break;
-              }
-              if (t && _.label < t[2]) {
-                _.label = t[2];
-                _.ops.push(op);
-                break;
-              }
-              if (t[2])
-                _.ops.pop();
-              _.trys.pop();
-              continue;
-          }
-          op = body.call(thisArg, _);
-        } catch (e2) {
-          op = [6, e2];
-          y = 0;
-        } finally {
-          f2 = t = 0;
+            }
+            if (t && _.label < t[2]) {
+              _.label = t[2];
+              _.ops.push(op);
+              break;
+            }
+            if (t[2]) _.ops.pop();
+            _.trys.pop();
+            continue;
         }
-      if (op[0] & 5)
-        throw op[1];
+        op = body.call(thisArg, _);
+      } catch (e2) {
+        op = [6, e2];
+        y = 0;
+      } finally {
+        f2 = t = 0;
+      }
+      if (op[0] & 5) throw op[1];
       return { value: op[0] ? op[1] : void 0, done: true };
     }
   }
   function __spreadArray(to, from, pack2) {
-    if (pack2 || arguments.length === 2)
-      for (var i2 = 0, l = from.length, ar; i2 < l; i2++) {
-        if (ar || !(i2 in from)) {
-          if (!ar)
-            ar = Array.prototype.slice.call(from, 0, i2);
-          ar[i2] = from[i2];
-        }
+    if (arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+      if (ar || !(i in from)) {
+        if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+        ar[i] = from[i];
       }
+    }
     return to.concat(ar || from);
   }
   var Bounds = (
@@ -224,17 +214,17 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var toCodePoints$1 = function(str) {
     var codePoints = [];
-    var i2 = 0;
+    var i = 0;
     var length = str.length;
-    while (i2 < length) {
-      var value = str.charCodeAt(i2++);
-      if (value >= 55296 && value <= 56319 && i2 < length) {
-        var extra = str.charCodeAt(i2++);
+    while (i < length) {
+      var value = str.charCodeAt(i++);
+      if (value >= 55296 && value <= 56319 && i < length) {
+        var extra = str.charCodeAt(i++);
         if ((extra & 64512) === 56320) {
           codePoints.push(((value & 1023) << 10) + (extra & 1023) + 65536);
         } else {
           codePoints.push(value);
-          i2--;
+          i--;
         }
       } else {
         codePoints.push(value);
@@ -283,7 +273,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     lookup$1$1[chars$1$1.charCodeAt(i$1$1)] = i$1$1;
   }
   var decode$1 = function(base642) {
-    var bufferLength = base642.length * 0.75, len = base642.length, i2, p = 0, encoded1, encoded2, encoded3, encoded4;
+    var bufferLength = base642.length * 0.75, len = base642.length, i, p = 0, encoded1, encoded2, encoded3, encoded4;
     if (base642[base642.length - 1] === "=") {
       bufferLength--;
       if (base642[base642.length - 2] === "=") {
@@ -292,11 +282,11 @@ var __plugin_monkey_exposed = function(exports, vue) {
     }
     var buffer = typeof ArrayBuffer !== "undefined" && typeof Uint8Array !== "undefined" && typeof Uint8Array.prototype.slice !== "undefined" ? new ArrayBuffer(bufferLength) : new Array(bufferLength);
     var bytes = Array.isArray(buffer) ? buffer : new Uint8Array(buffer);
-    for (i2 = 0; i2 < len; i2 += 4) {
-      encoded1 = lookup$1$1[base642.charCodeAt(i2)];
-      encoded2 = lookup$1$1[base642.charCodeAt(i2 + 1)];
-      encoded3 = lookup$1$1[base642.charCodeAt(i2 + 2)];
-      encoded4 = lookup$1$1[base642.charCodeAt(i2 + 3)];
+    for (i = 0; i < len; i += 4) {
+      encoded1 = lookup$1$1[base642.charCodeAt(i)];
+      encoded2 = lookup$1$1[base642.charCodeAt(i + 1)];
+      encoded3 = lookup$1$1[base642.charCodeAt(i + 2)];
+      encoded4 = lookup$1$1[base642.charCodeAt(i + 3)];
       bytes[p++] = encoded1 << 2 | encoded2 >> 4;
       bytes[p++] = (encoded2 & 15) << 4 | encoded3 >> 2;
       bytes[p++] = (encoded3 & 3) << 6 | encoded4 & 63;
@@ -306,16 +296,16 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var polyUint16Array$1 = function(buffer) {
     var length = buffer.length;
     var bytes = [];
-    for (var i2 = 0; i2 < length; i2 += 2) {
-      bytes.push(buffer[i2 + 1] << 8 | buffer[i2]);
+    for (var i = 0; i < length; i += 2) {
+      bytes.push(buffer[i + 1] << 8 | buffer[i]);
     }
     return bytes;
   };
   var polyUint32Array$1 = function(buffer) {
     var length = buffer.length;
     var bytes = [];
-    for (var i2 = 0; i2 < length; i2 += 4) {
-      bytes.push(buffer[i2 + 3] << 24 | buffer[i2 + 2] << 16 | buffer[i2 + 1] << 8 | buffer[i2]);
+    for (var i = 0; i < length; i += 4) {
+      bytes.push(buffer[i + 3] << 24 | buffer[i + 2] << 16 | buffer[i + 1] << 8 | buffer[i]);
     }
     return bytes;
   };
@@ -515,10 +505,10 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var isAdjacentWithSpaceIgnored = function(a2, b, currentIndex, classTypes) {
     var current = classTypes[currentIndex];
     if (Array.isArray(a2) ? a2.indexOf(current) !== -1 : a2 === current) {
-      var i2 = currentIndex;
-      while (i2 <= classTypes.length) {
-        i2++;
-        var next2 = classTypes[i2];
+      var i = currentIndex;
+      while (i <= classTypes.length) {
+        i++;
+        var next2 = classTypes[i];
         if (next2 === b) {
           return true;
         }
@@ -528,10 +518,10 @@ var __plugin_monkey_exposed = function(exports, vue) {
       }
     }
     if (current === SP) {
-      var i2 = currentIndex;
-      while (i2 > 0) {
-        i2--;
-        var prev = classTypes[i2];
+      var i = currentIndex;
+      while (i > 0) {
+        i--;
+        var prev = classTypes[i];
         if (Array.isArray(a2) ? a2.indexOf(prev) !== -1 : a2 === prev) {
           var n = currentIndex;
           while (n <= classTypes.length) {
@@ -553,11 +543,11 @@ var __plugin_monkey_exposed = function(exports, vue) {
     return false;
   };
   var previousNonSpaceClassType = function(currentIndex, classTypes) {
-    var i2 = currentIndex;
-    while (i2 >= 0) {
-      var type = classTypes[i2];
+    var i = currentIndex;
+    while (i >= 0) {
+      var type = classTypes[i];
       if (type === SP) {
-        i2--;
+        i--;
       } else {
         return type;
       }
@@ -702,11 +692,11 @@ var __plugin_monkey_exposed = function(exports, vue) {
       return BREAK_NOT_ALLOWED$1;
     }
     if (current === RI$1 && next2 === RI$1) {
-      var i2 = indicies[currentIndex];
+      var i = indicies[currentIndex];
       var count = 1;
-      while (i2 > 0) {
-        i2--;
-        if (classTypes[i2] === RI$1) {
+      while (i > 0) {
+        i--;
+        if (classTypes[i] === RI$1) {
           count++;
         } else {
           break;
@@ -731,8 +721,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
         return [NU, AL, SA].indexOf(type) !== -1 ? ID : type;
       });
     }
-    var forbiddenBreakpoints = options.wordBreak === "keep-all" ? isLetterNumber.map(function(letterNumber, i2) {
-      return letterNumber && codePoints[i2] >= 19968 && codePoints[i2] <= 40959;
+    var forbiddenBreakpoints = options.wordBreak === "keep-all" ? isLetterNumber.map(function(letterNumber, i) {
+      return letterNumber && codePoints[i] >= 19968 && codePoints[i] <= 40959;
     }) : void 0;
     return [indicies, classTypes, forbiddenBreakpoints];
   };
@@ -1335,32 +1325,32 @@ var __plugin_monkey_exposed = function(exports, vue) {
       };
       Tokenizer2.prototype.consumeStringToken = function(endingCodePoint) {
         var value = "";
-        var i2 = 0;
+        var i = 0;
         do {
-          var codePoint = this._value[i2];
+          var codePoint = this._value[i];
           if (codePoint === EOF || codePoint === void 0 || codePoint === endingCodePoint) {
-            value += this.consumeStringSlice(i2);
+            value += this.consumeStringSlice(i);
             return { type: 0, value };
           }
           if (codePoint === LINE_FEED) {
-            this._value.splice(0, i2);
+            this._value.splice(0, i);
             return BAD_STRING_TOKEN;
           }
           if (codePoint === REVERSE_SOLIDUS) {
-            var next2 = this._value[i2 + 1];
+            var next2 = this._value[i + 1];
             if (next2 !== EOF && next2 !== void 0) {
               if (next2 === LINE_FEED) {
-                value += this.consumeStringSlice(i2);
-                i2 = -1;
+                value += this.consumeStringSlice(i);
+                i = -1;
                 this._value.shift();
               } else if (isValidEscape(codePoint, next2)) {
-                value += this.consumeStringSlice(i2);
+                value += this.consumeStringSlice(i);
                 value += fromCodePoint$1(this.consumeEscapedCodePoint());
-                i2 = -1;
+                i = -1;
               }
             }
           }
-          i2++;
+          i++;
         } while (true);
       };
       Tokenizer2.prototype.consumeNumber = function() {
@@ -1771,13 +1761,13 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var pack = function(r, g, b, a2) {
     return (r << 24 | g << 16 | b << 8 | Math.round(a2 * 255) << 0) >>> 0;
   };
-  var getTokenColorValue = function(token, i2) {
+  var getTokenColorValue = function(token, i) {
     if (token.type === 17) {
       return token.number;
     }
     if (token.type === 16) {
-      var max = i2 === 3 ? 1 : 255;
-      return i2 === 3 ? token.number / 100 * max : Math.round(token.number / 100 * max);
+      var max = i === 3 ? 1 : 255;
+      return i === 3 ? token.number / 100 * max : Math.round(token.number / 100 * max);
     }
     return 0;
   };
@@ -2029,8 +2019,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
     }
     var processStops = [];
     var previous = 0;
-    for (var i2 = 0; i2 < stops.length; i2++) {
-      var stop_1 = stops[i2].stop;
+    for (var i = 0; i < stops.length; i++) {
+      var stop_1 = stops[i].stop;
       if (stop_1 !== null) {
         var absoluteValue = getAbsoluteValue(stop_1, lineLength);
         if (absoluteValue > previous) {
@@ -2044,14 +2034,14 @@ var __plugin_monkey_exposed = function(exports, vue) {
       }
     }
     var gapBegin = null;
-    for (var i2 = 0; i2 < processStops.length; i2++) {
-      var stop_2 = processStops[i2];
+    for (var i = 0; i < processStops.length; i++) {
+      var stop_2 = processStops[i];
       if (stop_2 === null) {
         if (gapBegin === null) {
-          gapBegin = i2;
+          gapBegin = i;
         }
       } else if (gapBegin !== null) {
-        var gapLength = i2 - gapBegin;
+        var gapLength = i - gapBegin;
         var beforeGap = processStops[gapBegin - 1];
         var gapValue = (stop_2 - beforeGap) / (gapLength + 1);
         for (var g = 1; g <= gapLength; g++) {
@@ -2060,9 +2050,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
         gapBegin = null;
       }
     }
-    return stops.map(function(_a, i3) {
+    return stops.map(function(_a, i2) {
       var color2 = _a.color;
-      return { color: color2, stop: Math.max(Math.min(1, processStops[i3] / lineLength), 0) };
+      return { color: color2, stop: Math.max(Math.min(1, processStops[i2] / lineLength), 0) };
     });
   };
   var getAngleFromCorner = function(corner, width, height) {
@@ -2157,8 +2147,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var linearGradient = function(context, tokens) {
     var angle$1 = deg(180);
     var stops = [];
-    parseFunctionArgs(tokens).forEach(function(arg, i2) {
-      if (i2 === 0) {
+    parseFunctionArgs(tokens).forEach(function(arg, i) {
+      if (i === 0) {
         var firstToken = arg[0];
         if (firstToken.type === 20 && firstToken.value === "to") {
           angle$1 = parseNamedSide(arg);
@@ -2181,8 +2171,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var prefixLinearGradient = function(context, tokens) {
     var angle$1 = deg(180);
     var stops = [];
-    parseFunctionArgs(tokens).forEach(function(arg, i2) {
-      if (i2 === 0) {
+    parseFunctionArgs(tokens).forEach(function(arg, i) {
+      if (i === 0) {
         var firstToken = arg[0];
         if (firstToken.type === 20 && ["top", "left", "right", "bottom"].indexOf(firstToken.value) !== -1) {
           angle$1 = parseNamedSide(arg);
@@ -2209,9 +2199,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var shape = 0;
     var size = 3;
     var position2 = [];
-    parseFunctionArgs(tokens).forEach(function(arg, i2) {
+    parseFunctionArgs(tokens).forEach(function(arg, i) {
       var firstToken = arg[0];
-      if (i2 === 0) {
+      if (i === 0) {
         if (isIdentToken(firstToken) && firstToken.value === "linear") {
           type = 1;
           return;
@@ -2261,9 +2251,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var size = 3;
     var stops = [];
     var position2 = [];
-    parseFunctionArgs(tokens).forEach(function(arg, i2) {
+    parseFunctionArgs(tokens).forEach(function(arg, i) {
       var isColorStop = true;
-      if (i2 === 0) {
+      if (i === 0) {
         var isAtPosition_1 = false;
         isColorStop = arg.reduce(function(acc, token) {
           if (isAtPosition_1) {
@@ -2339,9 +2329,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var size = 3;
     var stops = [];
     var position2 = [];
-    parseFunctionArgs(tokens).forEach(function(arg, i2) {
+    parseFunctionArgs(tokens).forEach(function(arg, i) {
       var isColorStop = true;
-      if (i2 === 0) {
+      if (i === 0) {
         isColorStop = arg.reduce(function(acc, token) {
           if (isIdentToken(token)) {
             switch (token.value) {
@@ -2363,7 +2353,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
           }
           return acc;
         }, isColorStop);
-      } else if (i2 === 1) {
+      } else if (i === 1) {
         isColorStop = arg.reduce(function(acc, token) {
           if (isIdentToken(token)) {
             switch (token.value) {
@@ -3066,8 +3056,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
           blur: ZERO_LENGTH
         };
         var c = 0;
-        for (var i2 = 0; i2 < values.length; i2++) {
-          var token = values[i2];
+        for (var i = 0; i < values.length; i++) {
+          var token = values[i];
           if (isLength(token)) {
             if (c === 0) {
               shadow.offsetX = token;
@@ -3405,9 +3395,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
       }
       var increments = [];
       var filtered = tokens.filter(nonWhiteSpace);
-      for (var i2 = 0; i2 < filtered.length; i2++) {
-        var counter = filtered[i2];
-        var next2 = filtered[i2 + 1];
+      for (var i = 0; i < filtered.length; i++) {
+        var counter = filtered[i];
+        var next2 = filtered[i + 1];
         if (counter.type === 20) {
           var increment = next2 && isNumberToken(next2) ? next2.number : 1;
           increments.push({ counter: counter.value, increment });
@@ -3427,9 +3417,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
       }
       var resets = [];
       var filtered = tokens.filter(nonWhiteSpace);
-      for (var i2 = 0; i2 < filtered.length; i2++) {
-        var counter = filtered[i2];
-        var next2 = filtered[i2 + 1];
+      for (var i = 0; i < filtered.length; i++) {
+        var counter = filtered[i];
+        var next2 = filtered[i + 1];
         if (isIdentToken(counter) && counter.value !== "none") {
           var reset = next2 && isNumberToken(next2) ? next2.number : 0;
           resets.push({ counter: counter.value, reset });
@@ -3467,9 +3457,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
       if (filtered.length % 2 !== 0) {
         return null;
       }
-      for (var i2 = 0; i2 < filtered.length; i2 += 2) {
-        var open_1 = filtered[i2].value;
-        var close_1 = filtered[i2 + 1].value;
+      for (var i = 0; i < filtered.length; i += 2) {
+        var open_1 = filtered[i].value;
+        var close_1 = filtered[i + 1].value;
         quotes2.push({ open: open_1, close: close_1 });
       }
       return quotes2;
@@ -3504,8 +3494,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
           inset: false
         };
         var c = 0;
-        for (var i2 = 0; i2 < values.length; i2++) {
-          var token = values[i2];
+        for (var i = 0; i < values.length; i++) {
+          var token = values[i];
           if (isIdentWithValue(token, "inset")) {
             shadow.inset = true;
           } else if (isLength(token)) {
@@ -3712,7 +3702,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   );
   var CSSParsedPseudoDeclaration = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function CSSParsedPseudoDeclaration2(context, declaration) {
         this.content = parse(context, content, declaration.content);
         this.quotes = parse(context, quotes, declaration.quotes);
@@ -3722,7 +3712,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   );
   var CSSParsedCounterDeclaration = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function CSSParsedCounterDeclaration2(context, declaration) {
         this.counterIncrement = parse(context, counterIncrement, declaration.counterIncrement);
         this.counterReset = parse(context, counterReset, declaration.counterReset);
@@ -3787,7 +3777,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var ElementContainer = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function ElementContainer2(context, element) {
         this.context = context;
         this.textNodes = [];
@@ -3830,7 +3820,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     lookup$1[chars$1.charCodeAt(i$1)] = i$1;
   }
   var decode = function(base642) {
-    var bufferLength = base642.length * 0.75, len = base642.length, i2, p = 0, encoded1, encoded2, encoded3, encoded4;
+    var bufferLength = base642.length * 0.75, len = base642.length, i, p = 0, encoded1, encoded2, encoded3, encoded4;
     if (base642[base642.length - 1] === "=") {
       bufferLength--;
       if (base642[base642.length - 2] === "=") {
@@ -3839,11 +3829,11 @@ var __plugin_monkey_exposed = function(exports, vue) {
     }
     var buffer = typeof ArrayBuffer !== "undefined" && typeof Uint8Array !== "undefined" && typeof Uint8Array.prototype.slice !== "undefined" ? new ArrayBuffer(bufferLength) : new Array(bufferLength);
     var bytes = Array.isArray(buffer) ? buffer : new Uint8Array(buffer);
-    for (i2 = 0; i2 < len; i2 += 4) {
-      encoded1 = lookup$1[base642.charCodeAt(i2)];
-      encoded2 = lookup$1[base642.charCodeAt(i2 + 1)];
-      encoded3 = lookup$1[base642.charCodeAt(i2 + 2)];
-      encoded4 = lookup$1[base642.charCodeAt(i2 + 3)];
+    for (i = 0; i < len; i += 4) {
+      encoded1 = lookup$1[base642.charCodeAt(i)];
+      encoded2 = lookup$1[base642.charCodeAt(i + 1)];
+      encoded3 = lookup$1[base642.charCodeAt(i + 2)];
+      encoded4 = lookup$1[base642.charCodeAt(i + 3)];
       bytes[p++] = encoded1 << 2 | encoded2 >> 4;
       bytes[p++] = (encoded2 & 15) << 4 | encoded3 >> 2;
       bytes[p++] = (encoded3 & 3) << 6 | encoded4 & 63;
@@ -3853,16 +3843,16 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var polyUint16Array = function(buffer) {
     var length = buffer.length;
     var bytes = [];
-    for (var i2 = 0; i2 < length; i2 += 2) {
-      bytes.push(buffer[i2 + 1] << 8 | buffer[i2]);
+    for (var i = 0; i < length; i += 2) {
+      bytes.push(buffer[i + 1] << 8 | buffer[i]);
     }
     return bytes;
   };
   var polyUint32Array = function(buffer) {
     var length = buffer.length;
     var bytes = [];
-    for (var i2 = 0; i2 < length; i2 += 4) {
-      bytes.push(buffer[i2 + 3] << 24 | buffer[i2 + 2] << 16 | buffer[i2 + 1] << 8 | buffer[i2]);
+    for (var i = 0; i < length; i += 4) {
+      bytes.push(buffer[i + 3] << 24 | buffer[i + 2] << 16 | buffer[i + 1] << 8 | buffer[i]);
     }
     return bytes;
   };
@@ -3964,17 +3954,17 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var RI = 15;
   var toCodePoints = function(str) {
     var codePoints = [];
-    var i2 = 0;
+    var i = 0;
     var length = str.length;
-    while (i2 < length) {
-      var value = str.charCodeAt(i2++);
-      if (value >= 55296 && value <= 56319 && i2 < length) {
-        var extra = str.charCodeAt(i2++);
+    while (i < length) {
+      var value = str.charCodeAt(i++);
+      if (value >= 55296 && value <= 56319 && i < length) {
+        var extra = str.charCodeAt(i++);
         if ((extra & 64512) === 56320) {
           codePoints.push(((value & 1023) << 10) + (extra & 1023) + 65536);
         } else {
           codePoints.push(value);
-          i2--;
+          i--;
         }
       } else {
         codePoints.push(value);
@@ -4135,19 +4125,19 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var range = document2.createRange();
     testElement.innerHTML = typeof "".repeat === "function" ? "&#128104;".repeat(10) : "";
     var node = testElement.firstChild;
-    var textList = toCodePoints$1(node.data).map(function(i2) {
-      return fromCodePoint$1(i2);
+    var textList = toCodePoints$1(node.data).map(function(i) {
+      return fromCodePoint$1(i);
     });
     var offset = 0;
     var prev = {};
-    var supports = textList.every(function(text, i2) {
+    var supports = textList.every(function(text, i) {
       range.setStart(node, offset);
       range.setEnd(node, offset + text.length);
       var rect = range.getBoundingClientRect();
       offset += text.length;
       var boundAhead = rect.x > prev.x || rect.y > prev.y;
       prev = rect;
-      if (i2 === 0) {
+      if (i === 0) {
         return true;
       }
       return boundAhead;
@@ -4282,7 +4272,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var TextBounds = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function TextBounds2(text, bounds) {
         this.text = text;
         this.bounds = bounds;
@@ -4406,7 +4396,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var TextContainer = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function TextContainer2(context, node, styles) {
         this.text = transform(node.data, styles.textTransform);
         this.textBounds = parseTextBounds(context, this.text, styles, node);
@@ -5275,15 +5265,13 @@ var __plugin_monkey_exposed = function(exports, vue) {
                   if (typeof referenceElement === "undefined") {
                     return [2, Promise.reject("Error finding the " + this.referenceElement.nodeName + " in the cloned document")];
                   }
-                  if (!(documentClone.fonts && documentClone.fonts.ready))
-                    return [3, 2];
+                  if (!(documentClone.fonts && documentClone.fonts.ready)) return [3, 2];
                   return [4, documentClone.fonts.ready];
                 case 1:
                   _a.sent();
                   _a.label = 2;
                 case 2:
-                  if (!/(AppleWebKit)/g.test(navigator.userAgent))
-                    return [3, 4];
+                  if (!/(AppleWebKit)/g.test(navigator.userAgent)) return [3, 4];
                   return [4, imagesReady(documentClone)];
                 case 3:
                   _a.sent();
@@ -5542,8 +5530,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 }).join(separator);
                 anonymousReplacedElement.appendChild(document2.createTextNode(text));
               }
-            } else
-              ;
+            } else ;
           } else if (token.type === 20) {
             switch (token.value) {
               case "open-quote":
@@ -5638,8 +5625,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
     // Safari shows pseudoelements if content is set
   ];
   var copyCSSStyles = function(style, target) {
-    for (var i2 = style.length - 1; i2 >= 0; i2--) {
-      var property = style.item(i2);
+    for (var i = style.length - 1; i >= 0; i--) {
+      var property = style.item(i);
       if (ignoredStyleProperties.indexOf(property) === -1) {
         target.style.setProperty(property, style.getPropertyValue(property));
       }
@@ -5757,8 +5744,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                   ];
                 }
                 src = key;
-                if (!useProxy)
-                  return [3, 2];
+                if (!useProxy) return [3, 2];
                 return [4, this.proxy(src)];
               case 1:
                 src = _a.sent();
@@ -5913,7 +5899,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var BoundCurves = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function BoundCurves2(element) {
         var styles = element.styles;
         var bounds = element.bounds;
@@ -6023,7 +6009,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var TransformEffect = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function TransformEffect2(offsetX, offsetY, matrix2) {
         this.offsetX = offsetX;
         this.offsetY = offsetY;
@@ -6036,7 +6022,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   );
   var ClipEffect = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function ClipEffect2(path, target) {
         this.path = path;
         this.target = target;
@@ -6047,7 +6033,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   );
   var OpacityEffect = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function OpacityEffect2(opacity2) {
         this.opacity = opacity2;
         this.type = 2;
@@ -6067,8 +6053,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var equalPath = function(a2, b) {
     if (a2.length === b.length) {
-      return a2.some(function(v, i2) {
-        return v === b[i2];
+      return a2.some(function(v, i) {
+        return v === b[i];
       });
     }
     return false;
@@ -6090,7 +6076,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   };
   var StackingContext = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function StackingContext2(container) {
         this.element = container;
         this.inlineLevel = [];
@@ -6218,9 +6204,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
           var order_1 = child.styles.zIndex.order;
           if (order_1 < 0) {
             var index_1 = 0;
-            parentStack.negativeZIndex.some(function(current, i2) {
+            parentStack.negativeZIndex.some(function(current, i) {
               if (order_1 > current.element.container.styles.zIndex.order) {
-                index_1 = i2;
+                index_1 = i;
                 return false;
               } else if (index_1 > 0) {
                 return true;
@@ -6230,9 +6216,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
             parentStack.negativeZIndex.splice(index_1, 0, stack);
           } else if (order_1 > 0) {
             var index_2 = 0;
-            parentStack.positiveZIndex.some(function(current, i2) {
+            parentStack.positiveZIndex.some(function(current, i) {
               if (order_1 >= current.element.container.styles.zIndex.order) {
-                index_2 = i2 + 1;
+                index_2 = i + 1;
                 return false;
               } else if (index_2 > 0) {
                 return true;
@@ -6271,8 +6257,8 @@ var __plugin_monkey_exposed = function(exports, vue) {
   var processListItems = function(owner, elements) {
     var numbering = owner instanceof OLElementContainer ? owner.start : 1;
     var reversed = owner instanceof OLElementContainer ? owner.reversed : false;
-    for (var i2 = 0; i2 < elements.length; i2++) {
-      var item = elements[i2];
+    for (var i = 0; i < elements.length; i++) {
+      var item = elements[i];
       if (item.container instanceof LIElementContainer && typeof item.container.value === "number" && item.container.value !== 0) {
         numbering = item.container.value;
       }
@@ -6592,7 +6578,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   );
   var Renderer = (
     /** @class */
-    function() {
+    /* @__PURE__ */ function() {
       function Renderer2(context, options) {
         this.context = context;
         this.options = options;
@@ -6660,8 +6646,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
             switch (_a.label) {
               case 0:
                 styles = stack.element.container.styles;
-                if (!styles.isVisible())
-                  return [3, 2];
+                if (!styles.isVisible()) return [3, 2];
                 return [4, this.renderStackContent(stack)];
               case 1:
                 _a.sent();
@@ -6687,8 +6672,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 )) {
                   debugger;
                 }
-                if (!paint.container.styles.isVisible())
-                  return [3, 3];
+                if (!paint.container.styles.isVisible()) return [3, 3];
                 return [4, this.renderNodeBackgroundAndBorders(paint)];
               case 1:
                 _a.sent();
@@ -6826,8 +6810,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _i = 0, _a = container.textNodes;
                 _c.label = 1;
               case 1:
-                if (!(_i < _a.length))
-                  return [3, 4];
+                if (!(_i < _a.length)) return [3, 4];
                 child = _a[_i];
                 return [4, this.renderTextNode(child, styles)];
               case 2:
@@ -6837,8 +6820,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _i++;
                 return [3, 1];
               case 4:
-                if (!(container instanceof ImageElementContainer))
-                  return [3, 8];
+                if (!(container instanceof ImageElementContainer)) return [3, 8];
                 _c.label = 5;
               case 5:
                 _c.trys.push([5, 7, , 8]);
@@ -6855,8 +6837,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 if (container instanceof CanvasElementContainer) {
                   this.renderReplacedElement(container, curves, container.canvas);
                 }
-                if (!(container instanceof SVGElementContainer))
-                  return [3, 12];
+                if (!(container instanceof SVGElementContainer)) return [3, 12];
                 _c.label = 9;
               case 9:
                 _c.trys.push([9, 11, , 12]);
@@ -6870,8 +6851,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 this.context.logger.error("Error loading svg " + container.svg.substring(0, 255));
                 return [3, 12];
               case 12:
-                if (!(container instanceof IFrameElementContainer && container.tree))
-                  return [3, 14];
+                if (!(container instanceof IFrameElementContainer && container.tree)) return [3, 14];
                 iframeRenderer = new CanvasRenderer2(this.context, {
                   scale: this.options.scale,
                   backgroundColor: container.backgroundColor,
@@ -6952,13 +6932,10 @@ var __plugin_monkey_exposed = function(exports, vue) {
                   container.styles.display,
                   2048
                   /* LIST_ITEM */
-                ))
-                  return [3, 20];
-                if (!(container.styles.listStyleImage !== null))
-                  return [3, 19];
+                )) return [3, 20];
+                if (!(container.styles.listStyleImage !== null)) return [3, 19];
                 img = container.styles.listStyleImage;
-                if (!(img.type === 0))
-                  return [3, 18];
+                if (!(img.type === 0)) return [3, 18];
                 image2 = void 0;
                 url = img.url;
                 _c.label = 15;
@@ -7016,8 +6993,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _i = 0, _a = stack.negativeZIndex;
                 _p.label = 2;
               case 2:
-                if (!(_i < _a.length))
-                  return [3, 5];
+                if (!(_i < _a.length)) return [3, 5];
                 child = _a[_i];
                 return [4, this.renderStack(child)];
               case 3:
@@ -7033,8 +7009,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _b = 0, _c = stack.nonInlineLevel;
                 _p.label = 7;
               case 7:
-                if (!(_b < _c.length))
-                  return [3, 10];
+                if (!(_b < _c.length)) return [3, 10];
                 child = _c[_b];
                 return [4, this.renderNode(child)];
               case 8:
@@ -7047,8 +7022,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _d = 0, _e = stack.nonPositionedFloats;
                 _p.label = 11;
               case 11:
-                if (!(_d < _e.length))
-                  return [3, 14];
+                if (!(_d < _e.length)) return [3, 14];
                 child = _e[_d];
                 return [4, this.renderStack(child)];
               case 12:
@@ -7061,8 +7035,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _f = 0, _g = stack.nonPositionedInlineLevel;
                 _p.label = 15;
               case 15:
-                if (!(_f < _g.length))
-                  return [3, 18];
+                if (!(_f < _g.length)) return [3, 18];
                 child = _g[_f];
                 return [4, this.renderStack(child)];
               case 16:
@@ -7075,8 +7048,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _h = 0, _j = stack.inlineLevel;
                 _p.label = 19;
               case 19:
-                if (!(_h < _j.length))
-                  return [3, 22];
+                if (!(_h < _j.length)) return [3, 22];
                 child = _j[_h];
                 return [4, this.renderNode(child)];
               case 20:
@@ -7089,8 +7061,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _k = 0, _l = stack.zeroOrAutoZIndexOrTransformedOrOpacity;
                 _p.label = 23;
               case 23:
-                if (!(_k < _l.length))
-                  return [3, 26];
+                if (!(_k < _l.length)) return [3, 26];
                 child = _l[_k];
                 return [4, this.renderStack(child)];
               case 24:
@@ -7103,8 +7074,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _m = 0, _o = stack.positiveZIndex;
                 _p.label = 27;
               case 27:
-                if (!(_m < _o.length))
-                  return [3, 30];
+                if (!(_m < _o.length)) return [3, 30];
                 child = _o[_m];
                 return [4, this.renderStack(child)];
               case 28:
@@ -7183,8 +7153,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                   return __generator(this, function(_h) {
                     switch (_h.label) {
                       case 0:
-                        if (!(backgroundImage3.type === 0))
-                          return [3, 5];
+                        if (!(backgroundImage3.type === 0)) return [3, 5];
                         image2 = void 0;
                         url = backgroundImage3.url;
                         _h.label = 1;
@@ -7274,8 +7243,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _i = 0, _a = container.styles.backgroundImage.slice(0).reverse();
                 _b.label = 1;
               case 1:
-                if (!(_i < _a.length))
-                  return [3, 4];
+                if (!(_i < _a.length)) return [3, 4];
                 backgroundImage2 = _a[_i];
                 return [5, _loop_1(backgroundImage2)];
               case 2:
@@ -7312,8 +7280,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
           return __generator(this, function(_a) {
             switch (_a.label) {
               case 0:
-                if (!(width < 3))
-                  return [3, 2];
+                if (!(width < 3)) return [3, 2];
                 return [4, this.renderSolidBorder(color2, side, curvePoints)];
               case 1:
                 _a.sent();
@@ -7357,8 +7324,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                   { style: styles.borderLeftStyle, color: styles.borderLeftColor, width: styles.borderLeftWidth }
                 ];
                 backgroundPaintingArea = calculateBackgroundCurvedPaintingArea(getBackgroundValueForIndex(styles.backgroundClip, 0), paint.curves);
-                if (!(hasBackground || styles.boxShadow.length))
-                  return [3, 2];
+                if (!(hasBackground || styles.boxShadow.length)) return [3, 2];
                 this.ctx.save();
                 this.path(backgroundPaintingArea);
                 this.ctx.clip();
@@ -7398,13 +7364,10 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _i = 0, borders_1 = borders;
                 _a.label = 3;
               case 3:
-                if (!(_i < borders_1.length))
-                  return [3, 13];
+                if (!(_i < borders_1.length)) return [3, 13];
                 border = borders_1[_i];
-                if (!(border.style !== 0 && !isTransparent(border.color) && border.width > 0))
-                  return [3, 11];
-                if (!(border.style === 2))
-                  return [3, 5];
+                if (!(border.style !== 0 && !isTransparent(border.color) && border.width > 0)) return [3, 11];
+                if (!(border.style === 2)) return [3, 5];
                 return [4, this.renderDashedDottedBorder(
                   border.color,
                   border.width,
@@ -7417,8 +7380,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _a.sent();
                 return [3, 11];
               case 5:
-                if (!(border.style === 3))
-                  return [3, 7];
+                if (!(border.style === 3)) return [3, 7];
                 return [4, this.renderDashedDottedBorder(
                   border.color,
                   border.width,
@@ -7431,8 +7393,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
                 _a.sent();
                 return [3, 11];
               case 7:
-                if (!(border.style === 4))
-                  return [3, 9];
+                if (!(border.style === 4)) return [3, 9];
                 return [4, this.renderDoubleBorder(border.color, border.width, side, paint.curves)];
               case 8:
                 _a.sent();
@@ -7814,8 +7775,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
               width: (_r = opts.width) !== null && _r !== void 0 ? _r : Math.ceil(width),
               height: (_s = opts.height) !== null && _s !== void 0 ? _s : Math.ceil(height)
             };
-            if (!foreignObjectRendering)
-              return [3, 3];
+            if (!foreignObjectRendering) return [3, 3];
             context.logger.debug("Document cloned, using foreign object rendering");
             renderer = new ForeignObjectRenderer(context, renderOptions);
             return [4, renderer.render(clonedElement)];
@@ -7854,14 +7814,12 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var defaultBackgroundColor = typeof backgroundColorOverride === "string" ? parseColor(context, backgroundColorOverride) : backgroundColorOverride === null ? COLORS.TRANSPARENT : 4294967295;
     return element === ownerDocument.documentElement ? isTransparent(documentBackgroundColor) ? isTransparent(bodyBackgroundColor) ? defaultBackgroundColor : bodyBackgroundColor : documentBackgroundColor : defaultBackgroundColor;
   };
-  var monkeyWindow = window;
-  var GM_download = /* @__PURE__ */ (() => monkeyWindow.GM_download)();
+  var _GM_download = /* @__PURE__ */ (() => typeof GM_download != "undefined" ? GM_download : void 0)();
   function extend(destination) {
-    for (var i2 = 1; i2 < arguments.length; i2++) {
-      var source = arguments[i2];
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
       for (var key in source) {
-        if (source.hasOwnProperty(key))
-          destination[key] = source[key];
+        if (source.hasOwnProperty(key)) destination[key] = source[key];
       }
     }
     return destination;
@@ -7874,8 +7832,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   }
   function trimTrailingNewlines(string) {
     var indexEnd = string.length;
-    while (indexEnd > 0 && string[indexEnd - 1] === "\n")
-      indexEnd--;
+    while (indexEnd > 0 && string[indexEnd - 1] === "\n") indexEnd--;
     return string.substring(0, indexEnd);
   }
   var blockElements = [
@@ -8082,9 +8039,9 @@ var __plugin_monkey_exposed = function(exports, vue) {
     },
     replacement: function(content2, node) {
       var href = node.getAttribute("href");
+      if (href) href = href.replace(/([()])/g, "\\$1");
       var title = cleanAttribute(node.getAttribute("title"));
-      if (title)
-        title = ' "' + title + '"';
+      if (title) title = ' "' + title.replace(/"/g, '\\"') + '"';
       return "[" + content2 + "](" + href + title + ")";
     }
   };
@@ -8095,8 +8052,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     replacement: function(content2, node, options) {
       var href = node.getAttribute("href");
       var title = cleanAttribute(node.getAttribute("title"));
-      if (title)
-        title = ' "' + title + '"';
+      if (title) title = ' "' + title + '"';
       var replacement;
       var reference;
       switch (options.linkReferenceStyle) {
@@ -8129,16 +8085,14 @@ var __plugin_monkey_exposed = function(exports, vue) {
   rules.emphasis = {
     filter: ["em", "i"],
     replacement: function(content2, node, options) {
-      if (!content2.trim())
-        return "";
+      if (!content2.trim()) return "";
       return options.emDelimiter + content2 + options.emDelimiter;
     }
   };
   rules.strong = {
     filter: ["strong", "b"],
     replacement: function(content2, node, options) {
-      if (!content2.trim())
-        return "";
+      if (!content2.trim()) return "";
       return options.strongDelimiter + content2 + options.strongDelimiter;
     }
   };
@@ -8149,14 +8103,12 @@ var __plugin_monkey_exposed = function(exports, vue) {
       return node.nodeName === "CODE" && !isCodeBlock;
     },
     replacement: function(content2) {
-      if (!content2)
-        return "";
+      if (!content2) return "";
       content2 = content2.replace(/\r?\n|\r/g, " ");
       var extraSpace = /^`|^ .*?[^ ].* $|`$/.test(content2) ? " " : "";
       var delimiter = "`";
       var matches = content2.match(/`+/gm) || [];
-      while (matches.indexOf(delimiter) !== -1)
-        delimiter = delimiter + "`";
+      while (matches.indexOf(delimiter) !== -1) delimiter = delimiter + "`";
       return delimiter + extraSpace + content2 + extraSpace + delimiter;
     }
   };
@@ -8185,8 +8137,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
       replacement: options.defaultReplacement
     };
     this.array = [];
-    for (var key in options.rules)
-      this.array.push(options.rules[key]);
+    for (var key in options.rules) this.array.push(options.rules[key]);
   }
   Rules.prototype = {
     add: function(key, rule) {
@@ -8207,41 +8158,32 @@ var __plugin_monkey_exposed = function(exports, vue) {
       });
     },
     forNode: function(node) {
-      if (node.isBlank)
-        return this.blankRule;
+      if (node.isBlank) return this.blankRule;
       var rule;
-      if (rule = findRule(this.array, node, this.options))
-        return rule;
-      if (rule = findRule(this._keep, node, this.options))
-        return rule;
-      if (rule = findRule(this._remove, node, this.options))
-        return rule;
+      if (rule = findRule(this.array, node, this.options)) return rule;
+      if (rule = findRule(this._keep, node, this.options)) return rule;
+      if (rule = findRule(this._remove, node, this.options)) return rule;
       return this.defaultRule;
     },
     forEach: function(fn) {
-      for (var i2 = 0; i2 < this.array.length; i2++)
-        fn(this.array[i2], i2);
+      for (var i = 0; i < this.array.length; i++) fn(this.array[i], i);
     }
   };
   function findRule(rules2, node, options) {
-    for (var i2 = 0; i2 < rules2.length; i2++) {
-      var rule = rules2[i2];
-      if (filterValue(rule, node, options))
-        return rule;
+    for (var i = 0; i < rules2.length; i++) {
+      var rule = rules2[i];
+      if (filterValue(rule, node, options)) return rule;
     }
     return void 0;
   }
   function filterValue(rule, node, options) {
     var filter = rule.filter;
     if (typeof filter === "string") {
-      if (filter === node.nodeName.toLowerCase())
-        return true;
+      if (filter === node.nodeName.toLowerCase()) return true;
     } else if (Array.isArray(filter)) {
-      if (filter.indexOf(node.nodeName.toLowerCase()) > -1)
-        return true;
+      if (filter.indexOf(node.nodeName.toLowerCase()) > -1) return true;
     } else if (typeof filter === "function") {
-      if (filter.call(rule, node, options))
-        return true;
+      if (filter.call(rule, node, options)) return true;
     } else {
       throw new TypeError("`filter` needs to be a string, array, or function");
     }
@@ -8253,8 +8195,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var isPre = options.isPre || function(node2) {
       return node2.nodeName === "PRE";
     };
-    if (!element.firstChild || isPre(element))
-      return;
+    if (!element.firstChild || isPre(element)) return;
     var prevText = null;
     var keepLeadingWs = false;
     var prev = null;
@@ -8352,8 +8293,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     try {
       document.implementation.createHTMLDocument("").open();
     } catch (e2) {
-      if (window.ActiveXObject)
-        useActiveX = true;
+      if (root.ActiveXObject) useActiveX = true;
     }
     return useActiveX;
   }
@@ -8412,7 +8352,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     return { leading: edges.leading, trailing: edges.trailing };
   }
   function edgeWhitespace(string) {
-    var m = string.match(/^(([ \t\r\n]*)(\s*))[\s\S]*?((\s*?)([ \t\r\n]*))$/);
+    var m = string.match(/^(([ \t\r\n]*)(\s*))(?:(?=\S)[\s\S]*\S)?((\s*?)([ \t\r\n]*))$/);
     return {
       leading: m[1],
       // whole string for whitespace-only strings
@@ -8463,8 +8403,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     [/^(\d+)\. /g, "$1\\. "]
   ];
   function TurndownService(options) {
-    if (!(this instanceof TurndownService))
-      return new TurndownService(options);
+    if (!(this instanceof TurndownService)) return new TurndownService(options);
     var defaults = {
       rules,
       headingStyle: "setext",
@@ -8505,8 +8444,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
           input + " is not a string, or an element/document/fragment node."
         );
       }
-      if (input === "")
-        return "";
+      if (input === "") return "";
       var output = process.call(this, new RootNode(input, this.options));
       return postProcess.call(this, output);
     },
@@ -8519,8 +8457,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
      */
     use: function(plugin) {
       if (Array.isArray(plugin)) {
-        for (var i2 = 0; i2 < plugin.length; i2++)
-          this.use(plugin[i2]);
+        for (var i = 0; i < plugin.length; i++) this.use(plugin[i]);
       } else if (typeof plugin === "function") {
         plugin(this);
       } else {
@@ -8601,8 +8538,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
     var rule = this.rules.forNode(node);
     var content2 = process.call(this, node);
     var whitespace = node.flankingWhitespace;
-    if (whitespace.leading || whitespace.trailing)
-      content2 = content2.trim();
+    if (whitespace.leading || whitespace.trailing) content2 = content2.trim();
     return whitespace.leading + rule.replacement(content2, node, this.options) + whitespace.trailing;
   }
   function join(output, replacement) {
@@ -8615,7 +8551,7 @@ var __plugin_monkey_exposed = function(exports, vue) {
   function canConvert(input) {
     return input != null && (typeof input === "string" || input.nodeType && (input.nodeType === 1 || input.nodeType === 9 || input.nodeType === 11));
   }
-  const turndownPluginGfm = function(exports2) {
+  const turndownPluginGfm = function(exports) {
     var highlightRegExp = /highlight-(?:text|source)-([a-z0-9]+)/;
     function highlightedCodeBlock(turndownService) {
       turndownService.addRule("highlightedCodeBlock", {
@@ -8653,12 +8589,11 @@ var __plugin_monkey_exposed = function(exports, vue) {
         var borderCells = "";
         var alignMap = { left: ":--", right: "--:", center: ":-:" };
         if (isHeadingRow(node)) {
-          for (var i2 = 0; i2 < node.childNodes.length; i2++) {
+          for (var i = 0; i < node.childNodes.length; i++) {
             var border = "---";
-            var align = (node.childNodes[i2].getAttribute("align") || "").toLowerCase();
-            if (align)
-              border = alignMap[align] || border;
-            borderCells += cell(border, node.childNodes[i2]);
+            var align = (node.childNodes[i].getAttribute("align") || "").toLowerCase();
+            if (align) border = alignMap[align] || border;
+            borderCells += cell(border, node.childNodes[i]);
           }
         }
         return "\n" + content2 + (borderCells ? "\n" + borderCells : "");
@@ -8694,16 +8629,14 @@ var __plugin_monkey_exposed = function(exports, vue) {
     function cell(content2, node) {
       var index = indexOf.call(node.parentNode.childNodes, node);
       var prefix = " ";
-      if (index === 0)
-        prefix = "| ";
+      if (index === 0) prefix = "| ";
       return prefix + content2 + " |";
     }
     function tables(turndownService) {
       turndownService.keep(function(node) {
         return node.nodeName === "TABLE" && !isHeadingRow(node.rows[0]);
       });
-      for (var key in rules2)
-        turndownService.addRule(key, rules2[key]);
+      for (var key in rules2) turndownService.addRule(key, rules2[key]);
     }
     function taskListItems(turndownService) {
       turndownService.addRule("taskListItems", {
@@ -8723,12 +8656,12 @@ var __plugin_monkey_exposed = function(exports, vue) {
         taskListItems
       ]);
     }
-    exports2.gfm = gfm;
-    exports2.highlightedCodeBlock = highlightedCodeBlock;
-    exports2.strikethrough = strikethrough;
-    exports2.tables = tables;
-    exports2.taskListItems = taskListItems;
-    return exports2;
+    exports.gfm = gfm;
+    exports.highlightedCodeBlock = highlightedCodeBlock;
+    exports.strikethrough = strikethrough;
+    exports.tables = tables;
+    exports.taskListItems = taskListItems;
+    return exports;
   }({});
   const _hoisted_1 = { class: "fixed right-0 bottom-[50%] w-[200px] transition-all translate-x-[180px] hover:translate-x-[0px] h-[200px] bg-gray-300 p-[20px] rounded space-y-[10px]" };
   const _sfc_main = /* @__PURE__ */ vue.defineComponent({
@@ -8782,7 +8715,7 @@ ${content2}
         html2canvas(contentDom).then(async (canvas) => {
           canvas.toBlob(function(blob) {
             const picName = getFileName() + ".png";
-            GM_download({
+            _GM_download({
               url: URL.createObjectURL(blob),
               name: picName,
               onload() {
@@ -8805,10 +8738,10 @@ ${content2}
         document.body.removeChild(link);
       }
       function handleCopyMarkdown() {
-        const content2 = Array.from(document.querySelectorAll("main .items-center>div")).map((i2) => {
-          let j = i2.cloneNode(true);
-          if (/dark\:bg-gray-800/.test(i2.getAttribute("class"))) {
-            j.innerHTML = `<h2>${i2.innerText}</h2>`;
+        const content2 = Array.from(document.querySelectorAll("main .items-center>div")).map((i) => {
+          let j = i.cloneNode(true);
+          if (/dark\:bg-gray-800/.test(i.getAttribute("class"))) {
+            j.innerHTML = `<h2>${i.innerText}</h2>`;
           }
           return j.innerHTML;
         }).join("<br />");
@@ -8833,7 +8766,6 @@ ${content2}
       };
     }
   });
-  const App_vue_vue_type_style_index_0_scoped_76ea7d44_lang = "";
   const _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
     for (const [key, val] of props) {
@@ -8842,7 +8774,6 @@ ${content2}
     return target;
   };
   const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-76ea7d44"]]);
-  const __uno = "";
   console.log("hello world");
   const appid = "chat-app-helper";
   function mountApp() {
@@ -8856,7 +8787,7 @@ ${content2}
       })()
     );
   }
-  const observer = new MutationObserver((mutationsList) => {
+  new MutationObserver((mutationsList) => {
     for (let mutation of mutationsList) {
       if (mutation.type === "childList") {
         if (!document.getElementById(appid)) {
@@ -8865,21 +8796,8 @@ ${content2}
       }
     }
   });
-  const config = {
-    attributes: true,
-    //观察目标属性的改变
-    childList: true,
-    //观察目标子节点的变化，比如添加或者删除目标子节点，不包括修改子节点以及子节点后代的变化
-    subtree: true,
-    // 目标以及目标的后代改变都会观察
-    characterData: true
-    //观察目标数据的改变(改变前的数据/值)
-  };
   setTimeout(() => {
     mountApp();
   }, 1e3);
-  exports.config = config;
-  exports.observer = observer;
-  Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-  return exports;
-}({}, Vue);
+
+})(Vue);
